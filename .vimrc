@@ -1,3 +1,4 @@
+execute pathogen#infect()
 syntax on
 filetype  on
 filetype indent plugin on
@@ -10,7 +11,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set sts=4
-execute pathogen#infect()
 
 """autocmd vimenter * NERDTree"""
 
