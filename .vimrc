@@ -39,7 +39,3 @@ set foldlevel=1         "this is just what i us
 filetype plugin on
 
 
-"""""""indent-guides-options""""
-"""let g:indent_guides_start_level = 2
-"""let g:indent_guides_guide_size = 1
-"""colorscheme default
