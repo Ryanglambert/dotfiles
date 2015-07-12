@@ -38,4 +38,3 @@ set foldlevel=1         "this is just what i us
 """"" for quick commenting """""
 filetype plugin on
 
-
