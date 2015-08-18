@@ -49,3 +49,4 @@ let g:indent_guides_guide_size = 1
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=58
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=230
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=230
+set ignorecase
