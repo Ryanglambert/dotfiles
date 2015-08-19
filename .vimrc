@@ -23,7 +23,7 @@ let NERDTreeShowHidden=1
 
 """These commands are for TagList"""
 nmap <leader>ta :Tlist<cr>
-let Tlist_WinWidth = 40
+let Tlist_WinWidth = 30
 let Tlist_Use_Right_Window = 1
 let Tlist_Ctags_Cmd='"/usr/local/Cellar/ctags/5.8/bin/ctags"'
 
