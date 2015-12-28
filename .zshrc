@@ -53,7 +53,13 @@ plugins=(git)
 
 # User configuration
 
+alias vim='mvim -v'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+ 
+# for Anaconda2
+
+#export PATH="/Users/ryanlambert/anaconda2/bin:$PATH"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
