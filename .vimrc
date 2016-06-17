@@ -1,7 +1,3 @@
-
-"#####VUNDLE AND YOUCOMPLETE ME DON'T WORK WITH ANACONDA2'S PYTHON DISTRO
-"THESE WILL REMAIN OFF UNLESS I GO BACK TO ANOTHER DISTRO###
-
 """BEGIN VUNDLE"""
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -17,32 +13,37 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
+
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+
 " plugin from http://vim-scripts.org/vim/scripts.html
 Plugin 'L9'
+
 " Git plugin not hosted on GitHub
 Plugin 'git://git.wincent.com/command-t.git'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Avoid a name conflict with L9
 "Plugin 'user/L9', {'name': 'newL9'}
-"YouCompleteMe
-Plugin 'file:///Users/ryanlambert/.vim/bundle/YouCompleteMe'
-"You complete me"
-Plugin 'file:///Users/ryanlambert/.vim/bundle/nerdtree' 
-"nerdtree"
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-indent-guides' 
-"markdown syntax"
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-markdown' 
-"quick commenting with gcc"
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-commentary' 
 
+" YouCompleteMe
+Plugin 'file:///Users/ryanlambert/.vim/bundle/YouCompleteMe'
+Plugin 'pangloss/vim-javascript'
+Plugin 'file:///Users/ryanlambert/.vim/bundle/nerdtree' 
+Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-indent-guides' 
+Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-markdown' 
+Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-commentary' 
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'HTML-AutoCloseTag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-" filetype plugin indent on    " required
+filetype plugin indent on    " required
  "To ignore plugin indent changes, instead use:
 filetype plugin on
 
@@ -62,9 +63,13 @@ filetype plugin on
 "SOLVING THIS ISSUE :
 "https://groups.google.com/forum/?hl=en#!searchin/ycm-users/server$20shut$20down/ycm-users/l-d6Wfe-kgk/bNqLD-qz5BsJ
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:airline#extensions#tabline#enabled = 1
 
+"make code pretty
+let python_highlight_all=1
 syntax on
-" filetype  on
+filetype  on
+set encoding=utf-8
 set number
 set smartindent
 set smarttab
@@ -73,6 +78,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set sts=4
+
 
 """autocmd vimenter * NERDTree"""
 
@@ -108,3 +114,22 @@ let g:indent_guides_guide_size = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=230
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=230
 set ignorecase
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+iabbrev <// </<C-X><C-O>
+imap <C-Space> <C-X><C-O>
+
+"Auto close html tags"
+source ~/.vim/scripts/closetag.vim
+
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
+
+

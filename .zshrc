@@ -88,3 +88,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# for Octave gnuplot font locations
+
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+
