@@ -115,6 +115,7 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=230
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=230
 set ignorecase
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
+let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
 
