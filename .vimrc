@@ -39,7 +39,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'HTML-AutoCloseTag'
+Plugin 'vim-scripts/HTML-AutoCloseTag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +78,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set sts=4
+
+"""Flake8-config  https://github.com/andviro/flake8-vim
 
 
 """autocmd vimenter * NERDTree"""
@@ -118,10 +120,6 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
-
-"Auto close html tags"
-source ~/.vim/scripts/closetag.vim
-
 
 "python with virtualenv support
 py << EOF

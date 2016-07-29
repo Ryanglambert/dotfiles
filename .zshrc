@@ -3,7 +3,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryanlambert/.oh-my-zsh
+export ZSH=/Users/ryan/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -94,4 +94,14 @@ export EDITOR='mvim -v'
 # for Octave gnuplot font locations
 
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+
+# Gild
+export ENVIRONMENT="local"
+export PYTHONPATH="$PYTHONPATH:$HOME/repos/gsp/:$HOME/repos/corenlp-python/"
+workon gsp
+
+# Gild AWS S3
+export AWS_ACCESS_KEY=AKIAJIKJNY3HTW76SEEA
+export AWS_SECRET_KEY=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
+
 
