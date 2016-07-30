@@ -29,12 +29,12 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " YouCompleteMe
-Plugin 'file:///Users/ryanlambert/.vim/bundle/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
-Plugin 'file:///Users/ryanlambert/.vim/bundle/nerdtree' 
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-indent-guides' 
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-markdown' 
-Plugin 'file:///Users/ryanlambert/.vim/bundle/vim-commentary' 
+Plugin 'scrooloose/nerdtree' 
+Plugin 'nathanaelkane/vim-indent-guides' 
+Plugin 'plasticboy/vim-markdown' 
+Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
