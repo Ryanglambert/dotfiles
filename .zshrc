@@ -100,8 +100,5 @@ export ENVIRONMENT="local"
 export PYTHONPATH="$PYTHONPATH:$HOME/repos/gsp/:$HOME/repos/corenlp-python/"
 workon gsp
 
-# Gild AWS S3
-export AWS_ACCESS_KEY=AKIAJIKJNY3HTW76SEEA
-export AWS_SECRET_KEY=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
 
 
