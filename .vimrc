@@ -29,10 +29,9 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
-Plugin 'nathanaelkane/vim-indent-guides' 
+" Plugin 'nathanaelkane/vim-indent-guides' 
 Plugin 'plasticboy/vim-markdown' 
 Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
@@ -40,6 +39,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'Yggdroot/indentLine'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,8 +63,8 @@ filetype plugin on
 
 "SOLVING THIS ISSUE :
 "https://groups.google.com/forum/?hl=en#!searchin/ycm-users/server$20shut$20down/ycm-users/l-d6Wfe-kgk/bNqLD-qz5BsJ
-let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 let g:airline#extensions#tabline#enabled = 1
+let g:ycm_python_binary_path = 'python'
 
 "make code pretty
 let python_highlight_all=1
@@ -79,6 +80,8 @@ set shiftwidth=4
 set expandtab
 set sts=4
 
+"""Set Scroll by page instead of by lines with cursor
+set mouse=a
 """Flake8-config  https://github.com/andviro/flake8-vim
 
 
@@ -95,7 +98,7 @@ let NERDTreeShowHidden=1
 nmap <leader>ta :Tlist<cr>
 let Tlist_WinWidth = 30
 let Tlist_Use_Right_Window = 1
-let Tlist_Ctags_Cmd='"/usr/local/Cellar/ctags/5.8/bin/ctags"'
+let Tlist_Ctags_Cmd='"/usr/local/Cellar/ctags/5.8_1/bin/ctags"'
 
 """""for code folding"""""
 
@@ -104,18 +107,19 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i us
 
-"""indent-guides"""
+"""indent-guides and colorscheme"""
 colorscheme default
-let g:indent_guides_enable_on_vim_startup = 0
-let g:indent_guides_auto_colors = 0 
-let g:indent_guides_guide_size = 1 
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=186
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=186
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=58
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=58
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=230
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=230
+let g:indentLine_enabled = 1
 set ignorecase
+let g:indentLine_char = '┆'
+" let g:indentLine_color_dark = 8 " (default: 2)
+" let g:indentLine_color_tty_light = 7 " (default: 4)
+let g:indentLine_color_term = 60
+set hlsearch
+highlight Search ctermfg=black
+
+
+"""YouCompleteMe Config"
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
