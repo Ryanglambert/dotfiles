@@ -3,7 +3,7 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryan/.oh-my-zsh
+export ZSH=/Users/ryanlambert/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
