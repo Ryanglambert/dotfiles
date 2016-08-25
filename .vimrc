@@ -41,6 +41,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'dkprice/vim-easygrep'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -134,5 +135,9 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+"""EasyGrep
+" let g:EasyGrepCommand=1
+
 
 
