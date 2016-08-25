@@ -96,9 +96,9 @@ export EDITOR='mvim -v'
 export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
 
 # Gild
-export ENVIRONMENT="local"
-export PYTHONPATH="$PYTHONPATH:$HOME/repos/gsp/:$HOME/repos/corenlp-python/"
-workon gsp
+# export ENVIRONMENT="local"
+# export PYTHONPATH="$PYTHONPATH:$HOME/repos/gsp/:$HOME/repos/corenlp-python/"
+# workon gsp
 
 
 
