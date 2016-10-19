@@ -120,11 +120,21 @@ set hlsearch
 highlight Search ctermfg=black
 
 
+"""Syntastic Config"
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_python_checkers = ['flake8']
+nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
 """YouCompleteMe Config"
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
+
+"""Don't Jump After Search
+" nnoremap * :keepjumps normal! *``<cr>
+nnoremap * :keepjumps normal! mi*`i<CR>
 
 "python with virtualenv support
 py << EOF
