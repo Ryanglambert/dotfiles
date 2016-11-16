@@ -86,18 +86,17 @@ set mouse=a
 """Flake8-config  https://github.com/andviro/flake8-vim
 
 
-"""autocmd vimenter * NERDTree"""
-
 """This command is to make comma into leader for nerdtree,taglist quickeys"""
 let mapleader = ","
 
 """These commands are for NERDTree shortcuts"""
 nmap <leader>ne :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.pyc$']
 
 """These commands are for TagList"""
 nmap <leader>ta :Tlist<cr>
-let Tlist_WinWidth = 30
+let Tlist_WinWidth = 35
 let Tlist_Use_Right_Window = 1
 let Tlist_Ctags_Cmd='"/usr/local/Cellar/ctags/5.8_1/bin/ctags"'
 
@@ -122,7 +121,9 @@ highlight Search ctermfg=black
 
 """Syntastic Config"
 let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_python_pylint_post_args="--max-line-length=120"
+let g:syntastic_python_flake8_args='--ignore=E501,E225'
+" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_python_checkers = ['flake8']
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
@@ -148,6 +149,7 @@ EOF
 
 """EasyGrep
 " let g:EasyGrepCommand=1
+let g:EasyGrepOpenWindowOnMatch=0
 
 
 
