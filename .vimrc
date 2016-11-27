@@ -42,6 +42,7 @@ Plugin 'vim-scripts/HTML-AutoCloseTag'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'raimondi/delimitmate'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,7 +84,6 @@ set sts=4
 
 """Set Scroll by page instead of by lines with cursor
 set mouse=a
-"""Flake8-config  https://github.com/andviro/flake8-vim
 
 
 """This command is to make comma into leader for nerdtree,taglist quickeys"""
@@ -136,6 +136,9 @@ imap <C-Space> <C-X><C-O>
 """Don't Jump After Search
 " nnoremap * :keepjumps normal! *``<cr>
 nnoremap * :keepjumps normal! mi*`i<CR>
+
+""" Syntastic 
+let g:syntastic_python_checkers = ['flake8']
 
 "python with virtualenv support
 py << EOF
