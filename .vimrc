@@ -43,6 +43,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'dkprice/vim-easygrep'
 Plugin 'raimondi/delimitmate'
+Plugin 'fisadev/vim-isort'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -81,6 +82,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set sts=4
+
+"""Set vim-isort key
+let g:vim_isort_map = '<C-i>'
 
 """Set Scroll by page instead of by lines with cursor
 set mouse=a
@@ -154,5 +158,6 @@ EOF
 " let g:EasyGrepCommand=1
 let g:EasyGrepOpenWindowOnMatch=0
 
-
-
+"""Vim no EOL
+set binary
+set noeol
