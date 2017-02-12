@@ -31,7 +31,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 " YouCompleteMe
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
-Plugin 'nathanaelkane/vim-indent-guides' 
 Plugin 'plasticboy/vim-markdown' 
 Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
@@ -78,7 +77,7 @@ set encoding=utf-8
 set number
 set smartindent
 set smarttab
-set autoindent
+" set autoindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -157,7 +156,7 @@ EOF
 
 """EasyGrep
 " let g:EasyGrepCommand=1
-let g:EasyGrepOpenWindowOnMatch=0
+" let g:EasyGrepOpenWindowOnMatch=0
 
 """Vim no EOL
 set binary
