@@ -31,7 +31,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 " YouCompleteMe
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
-" Plugin 'nathanaelkane/vim-indent-guides' 
 Plugin 'plasticboy/vim-markdown' 
 Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
@@ -39,11 +38,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/HTML-AutoCloseTag'
+Plugin 'taglist.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'dkprice/vim-easygrep'
-Plugin 'raimondi/delimitmate'
+" Plugin 'raimondi/delimitmate'
 Plugin 'fisadev/vim-isort'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,8 +79,8 @@ set encoding=utf-8
 set number
 set smartindent
 set smarttab
-set autoindent
-set tabstop=4
+" set autoindent
+set tabstop=8
 set shiftwidth=4
 set expandtab
 set sts=4
@@ -156,7 +158,7 @@ EOF
 
 """EasyGrep
 " let g:EasyGrepCommand=1
-let g:EasyGrepOpenWindowOnMatch=0
+" let g:EasyGrepOpenWindowOnMatch=0
 
 """Vim no EOL
 set binary
