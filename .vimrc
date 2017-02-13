@@ -125,9 +125,9 @@ highlight Search ctermfg=black
 
 """Syntastic Config"
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_post_args="--max-line-length=120"
-let g:syntastic_python_flake8_args='--ignore=E501,E225'
-" let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+let g:syntastic_python_pylint_post_args="--max-line-length=100"
+let g:syntastic_python_flake8_args='--ignore=E501,E225,W391'
+let g:syntastic_mode_map = { 'mode': 'active', 'active_filetypes': [],'passive_filetypes': [] }
 let g:syntastic_python_checkers = ['flake8']
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
@@ -141,8 +141,8 @@ imap <C-Space> <C-X><C-O>
 " nnoremap * :keepjumps normal! *``<cr>
 nnoremap * :keepjumps normal! mi*`i<CR>
 
-""" Syntastic 
-let g:syntastic_python_checkers = ['flake8']
+"""" Don't hide json diacritics
+set conceallevel=0
 
 "python with virtualenv support
 py << EOF
