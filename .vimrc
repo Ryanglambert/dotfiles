@@ -42,8 +42,10 @@ Plugin 'taglist.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'dkprice/vim-easygrep'
-Plugin 'raimondi/delimitmate'
+" Plugin 'raimondi/delimitmate'
 Plugin 'fisadev/vim-isort'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,7 +80,7 @@ set number
 set smartindent
 set smarttab
 " set autoindent
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
 set expandtab
 set sts=4
