@@ -42,6 +42,7 @@ Plugin 'taglist.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'dkprice/vim-easygrep'
+Plugin 'elzr/vim-json'
 " Plugin 'raimondi/delimitmate'
 Plugin 'fisadev/vim-isort'
 Plugin 'Vimjas/vim-python-pep8-indent'
@@ -144,7 +145,7 @@ imap <C-Space> <C-X><C-O>
 nnoremap * :keepjumps normal! mi*`i<CR>
 
 """" Don't hide json diacritics
-set conceallevel=0
+let g:vim_json_syntax_conceal = 0
 
 "python with virtualenv support
 py << EOF
