@@ -45,14 +45,16 @@ Plugin 'dkprice/vim-easygrep'
 Plugin 'elzr/vim-json'
 " Plugin 'raimondi/delimitmate'
 Plugin 'fisadev/vim-isort'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'jiangmiao/auto-pairs'
+Bundle 'lepture/vim-jinja'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
  "To ignore plugin indent changes, instead use:
-filetype plugin on
+" filetype plugin on
 
  "Brief help
  " :PluginList       - lists configured plugins
@@ -158,8 +160,11 @@ if 'VIRTUAL_ENV' in os.environ:
 EOF
 
 """EasyGrep
-" let g:EasyGrepCommand=1
+let g:EasyGrepCommand=1
 " let g:EasyGrepOpenWindowOnMatch=0
+
+"""vim-jinja
+au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
 
 """Vim no EOL
 set binary
