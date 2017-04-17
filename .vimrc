@@ -29,6 +29,9 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " YouCompleteMe
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-scripts/c.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
 Plugin 'plasticboy/vim-markdown' 
@@ -117,7 +120,13 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i us
 
 """indent-guides and colorscheme"""
-colorscheme default
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+"
 let g:indentLine_enabled = 1
 set ignorecase
 let g:indentLine_char = '┆'
