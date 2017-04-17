@@ -89,9 +89,6 @@ set sts=4
 """Set vim-isort key
 let g:vim_isort_map = '<C-i>'
 
-"""Set Scroll by page instead of by lines with cursor
-set mouse=a
-
 
 """This command is to make comma into leader for nerdtree,taglist quickeys"""
 let mapleader = ","
@@ -157,10 +154,14 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-"""EasyGrep
-" let g:EasyGrepCommand=1
+"EasyGrep
+let g:EasyGrepCommand=1
 " let g:EasyGrepOpenWindowOnMatch=0
 
 """Vim no EOL
 set binary
 set noeol
+
+"""Set Scroll by page instead of by lines with cursor
+set mouse=a
+
