@@ -29,8 +29,11 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'user/L9', {'name': 'newL9'}
 
 " YouCompleteMe
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'plasticboy/vim-markdown' 
 Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
@@ -112,7 +115,13 @@ set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i us
 
 """indent-guides and colorscheme"""
-colorscheme default
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+
 let g:indentLine_enabled = 1
 set ignorecase
 let g:indentLine_char = '┆'
@@ -136,6 +145,8 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 
 """Don't Jump After Search
 " nnoremap * :keepjumps normal! *``<cr>
@@ -157,6 +168,9 @@ EOF
 "EasyGrep
 let g:EasyGrepCommand=1
 " let g:EasyGrepOpenWindowOnMatch=0
+
+"""Set python Breakpoints
+map <leader>b oimport ipdb; ipdb.set_trace()<esc>
 
 """Vim no EOL
 set binary
