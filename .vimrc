@@ -31,9 +31,9 @@ Plugin 'git://git.wincent.com/command-t.git'
 " YouCompleteMe
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-scripts/c.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdtree' 
+Plugin 'airblade/vim-gitgutter'
 Plugin 'plasticboy/vim-markdown' 
 Plugin 'tpope/vim-commentary' 
 Plugin 'scrooloose/syntastic'
@@ -94,9 +94,6 @@ set sts=4
 """Set vim-isort key
 let g:vim_isort_map = '<C-i>'
 
-"""Set Scroll by page instead of by lines with cursor
-set mouse=a
-
 
 """This command is to make comma into leader for nerdtree,taglist quickeys"""
 let mapleader = ","
@@ -126,7 +123,7 @@ if has('gui_running')
 else
   colorscheme zenburn
 endif
-"
+
 let g:indentLine_enabled = 1
 set ignorecase
 let g:indentLine_char = '┆'
@@ -150,6 +147,8 @@ let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_seed_identifiers_with_syntax = 1
 iabbrev <// </<C-X><C-O>
 imap <C-Space> <C-X><C-O>
+nnoremap <leader>gl :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>gf :YcmCompleter GoToDefinition<CR>
 
 """Don't Jump After Search
 " nnoremap * :keepjumps normal! *``<cr>
@@ -168,13 +167,17 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
-"""EasyGrep
+"EasyGrep
 let g:EasyGrepCommand=1
 " let g:EasyGrepOpenWindowOnMatch=0
 
-"""vim-jinja
-au BufNewFile,BufRead *.html,*.htm,*.shtml,*.stm set ft=jinja
+"""Set python Breakpoints
+map <leader>b oimport ipdb; ipdb.set_trace()<esc>
 
 """Vim no EOL
 set binary
 set noeol
+
+"""Set Scroll by page instead of by lines with cursor
+set mouse=a
+
