@@ -51,6 +51,7 @@ Plugin 'fisadev/vim-isort'
 Plugin 'Vimjas/vim-python-pep8-indent'
 Plugin 'jiangmiao/auto-pairs'
 Bundle 'lepture/vim-jinja'
+Bundle 'https://github.com/freeo/vim-kalisi'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -118,7 +119,9 @@ set foldlevel=1         "this is just what i us
 """indent-guides and colorscheme"""
 if has('gui_running')
   set background=dark
-  colorscheme solarized
+  " colorscheme solarized
+  let g:airline_theme='kalisi'
+  colorscheme kalisi 
 else
   colorscheme zenburn
 endif
