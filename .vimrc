@@ -74,7 +74,7 @@ filetype plugin indent on    " required
 
 "SOLVING THIS ISSUE :
 "https://groups.google.com/forum/?hl=en#!searchin/ycm-users/server$20shut$20down/ycm-users/l-d6Wfe-kgk/bNqLD-qz5BsJ
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:ycm_python_binary_path = 'python'
 
 "make code pretty
@@ -83,9 +83,9 @@ syntax on
 filetype  on
 set encoding=utf-8
 set number
-set smartindent
-set smarttab
-" set autoindent
+" set smartindent
+" set smarttab
+set autoindent
 set tabstop=8
 set shiftwidth=4
 set expandtab
