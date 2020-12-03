@@ -1,0 +1,31 @@
+{
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "editor.wordWrap": "on",
+    "vim.hlsearch": true,
+    "vim.useCtrlKeys": true,
+    "vim.cmdLineInitialColon": true,
+    "vim.easymotion": true,
+    "vim.handleKeys": {
+        "<C-d>": true
+    },
+    "python.linting.enabled": true,
+    "window.zoomLevel": 0,
+    "editor.lineNumbers": "relative",
+    "workbench.editor.enablePreview": false,
+    "editor.largeFileOptimizations": false,
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/.env": true
+    },
+    "files.exclude": {
+        "__pycache__": true,
+        ".env": true,
+        ".venv": true,
+        "*/.ipynb_checkpoints/": true,
+        ".ipynb_checkpoints/": true,
+        ".vscode": true
+    }
+}
