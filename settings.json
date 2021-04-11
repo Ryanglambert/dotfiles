@@ -27,5 +27,6 @@
         "*/.ipynb_checkpoints/": true,
         ".ipynb_checkpoints/": true,
         ".vscode": true
-    }
+    },
+    "workbench.editorAssociations": []
 }
