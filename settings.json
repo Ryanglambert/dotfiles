@@ -11,7 +11,6 @@
         "<C-d>": true
     },
     "python.linting.enabled": true,
-    "window.zoomLevel": 0,
     "editor.lineNumbers": "relative",
     "workbench.editor.enablePreview": false,
     "editor.largeFileOptimizations": false,
